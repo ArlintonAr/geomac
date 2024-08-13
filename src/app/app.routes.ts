@@ -30,7 +30,7 @@ import { LayoutWorkWithComponent } from './workWithUs/pages/layout-work-with.com
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'inicio',
     component: LayoutsComponent,
     children: [
       { path: 'inicio', component: LayoutHomeComponent },
