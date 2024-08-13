@@ -1,0 +1,42 @@
+<nav class="navigation  bg-geo-white  h-full  w-[100%] overflow-auto
+            ">
+
+
+  <div class="container  flex  w-[100%] ">
+    <div id="navbar" class=" text-geo-blue font-light  w-[100%] h-full">
+      <ul class="nav  flex flex-col justify-between w-full   h-full
+
+          ">
+        @for (itemMenu of itemsMenuNavbar; track $index) {
+        <li class=" border-b border-geo-griss-light transition duration-400 p-[.8rem] cursor-pointer w-full
+                  ">
+          <a [href]="" class="cursor-pointer text-sm ml-[1rem] font-bold
+              flex justify-between items-center" [routerLink]="itemMenu.route" routerLinkActive="active">
+            {{itemMenu.name}}
+
+            @if(itemMenu.subMenu){
+            <div class="content-icon-down  w-full flex justify-end items-end h-[100%]" (click)="changeStateSubMenu()">
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            }
+          </a>
+          @if (itemMenu.subMenu) {
+          <ul class=" w-full flex flex-col justify-center items-center">
+            @for (subItem of itemMenu.subMenu; track $index) {
+            <a href="">
+              <li class="text-geo-blue bg-geo-white p-[.6rem] text-sm font-light border-b border-geo-griss-light w-[15rem] cursor-pointer w-full
+                        hover:bg-geo-white hover:text-geo-blue
+
+                         " [ngClass]="{'hidden': isActiveHidden}">
+                {{subItem.name}}
+              </li>
+            </a>
+            }
+          </ul>
+          }
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</nav>

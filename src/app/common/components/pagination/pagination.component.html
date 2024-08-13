@@ -1,0 +1,30 @@
+<div class="content w-full
+        flex flex-col items-center gap-4 p-[1rem] h-auto
+      ">
+
+  <div class="cards flex justify-between justify-start gap-4 flex-wrap h-[90%]" arrayContent>
+    @for (arrayC of arrayContent | paginate:{itemsPerPage:6,currentPage:p}; track $index ) {
+    <div class="max-w-sm bg-white border border-geo-yellow rounded-lg shadow dark:bg-gray-800
+                  flex-none cursor-pointer
+              ">
+      <a >
+        <img class="rounded-t-lg w-full object-cover" [src]="arrayC.image" alt="" />
+      </a>
+
+      <div class="p-5">
+        <a >
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{arrayC.title}}</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{arrayC.description}}</p>
+      </div>
+    </div>
+    }
+  </div>
+
+  <div class="buttons flex justify-center items-center h-[100%]">
+    <pagination-controls (pageChange)="p=$event" previousLabel="Atrás" nextLabel="Siguiente" >
+    </pagination-controls>
+
+  </div>
+
+</div>

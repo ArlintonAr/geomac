@@ -1,0 +1,59 @@
+<header class=" header-principal flex flex-col gap-2 ">
+
+  <!-- <div class="directions  bg-geo-blue
+    flex flex-col justify-center items-center
+    ">
+      <common-directions class="w-[90%]" />
+
+  </div> -->
+  <!--
+  <div class="logo-certifications  border-geo-griss
+              flex flex-col justify-center items-center
+              ">
+    <logo-certifications class="w-[90%]" />
+  </div> -->
+
+  <div class="navigation absolute z-30  flex flex-row justify-center items-center w-full
+              mobile:bg-geo-white
+              tablet:bg-geo-white
+              ">
+    <div class="content-sidebars w-[90%]
+              mobile:flex mobile:justify-end mobile:bg-geo-white
+              tablet:flex tablet:justify-end  tablet:bg-geo-white
+    ">
+      <geomac-sidebar class="w-[90%]
+    mobile:hidden
+    tablet:hidden
+    " />
+    </div>
+
+  </div>
+
+  @if(isActive){
+  <sidebar-small class=" fixed  top-0 z-50 w-[20rem] h-full right-0 transition duration-400
+  laptop:hidden desktop:hidden
+  " />
+  <button-close-small-bar class="fixed  top-0 fiexed z-50  right-[18.5rem]
+  laptop:hidden desktop:hidden
+  " (click)="closeSmallBar()" />
+
+  }
+  <button-sidebar-small class="fixed buttom-[0] right-[0] z-40  laptop:hidden desktop:hidden"
+    (click)="openSmallBar()" />
+
+</header>
+
+<section>
+
+  <router-outlet />
+
+
+</section>
+
+<footer class="major-footer bg-geo-blue-black  h-screen
+      flex justify-center items-center
+      tablet:h-auto
+      mobile:h-auto
+      ">
+  <geomac-footer class="w-[90%]  " />
+</footer>

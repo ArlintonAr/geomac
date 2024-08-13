@@ -1,0 +1,45 @@
+<div class="relative content  text-geo-white p-[1rem] h-[100%]
+      flex flex-col  items-center gap-4
+    ">
+
+  <div class="title flex flex-col items-center gap-4 h-[100%]">
+    <h1 class="text-medium font-bold tablet:text-regular mobile:text-base ">NUESTRO EQUIPO</h1>
+    <div class="bar h-[.3rem] w-[4rem] bg-geo-yellow">
+    </div>
+    <p class="text-regular tablet:text-base mobile:text-sm ">Compromiso en la realización de trabajos y brindando un servicio de calidad.</p>
+  </div>
+
+  <div class=" album z-10 w-full flex justify-center items-center h-[100%]">
+
+    <div class="arrows  text-large cursor-pointer hover:text-geo-yellow" (click)="changeForButton()">
+      <i class="fa-solid fa-caret-left" ></i>
+    </div>
+
+    <div class="employees   w-[80%]
+           flex justify-between items-center overflow-x-hidden gap-4
+    ">
+      @for (employee of employees; track $index) {
+      <div class="employee  flex-none h-[100%] cursor-pointer
+            flex flex-col j items-center
+          ">
+
+        <div class="img w-[90%] h-[90%]  flex justify-center">
+          <img class="object-cover h-[24rem]  mobile:h-[15rem] tablet:h-[15rem] " [src]="employee.photo" alt="">
+        </div>
+        <h2 class=" text-regular font-bold tablet:text-base mobile:text-sm">{{employee.name}}</h2>
+        <p class="text-geo-yellow mobile:text-sm">{{employee.position}}</p>
+
+      </div>
+      }
+    </div>
+    <div class="arrows text-large cursor-pointer hover:text-geo-yellow" (click)="changeForButton()">
+      <i class="fa-solid fa-caret-right"></i>
+    </div>
+
+  </div>
+
+  <div class="absolute top-[50%] border border-4 border-geo-yellow w-full h-[55%] tablet:hidden mobile:hidden">
+
+  </div>
+
+</div>

@@ -1,0 +1,31 @@
+
+<div class="content">
+
+  <section>
+    <title-for-pages [titlePage]="title" />
+  </section>
+   <section class="  flex justify-center items-center h-screen
+   mobile:h-auto
+   tablet:h-auto
+          ">
+    <div class="content-menu-page w-[90%]  flex justify-between h-screen
+        mobile:flex-col mobile:h-auto
+        tablet:flex-col tablet:h-auto
+      ">
+      <div class="content-menu w-[35%] h-auto
+      mobile:w-auto
+      tablet:w-auto
+        ">
+        <menu-products  class=" "  />
+      </div>
+      <div class="content-pages  w-[65%]  overflow-y-scroll h-auto
+      mobile:w-auto
+      tablet:w-auto
+        ">
+        <router-outlet />
+      </div>
+
+    </div>
+   </section>
+
+</div>

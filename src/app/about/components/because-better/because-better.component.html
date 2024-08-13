@@ -1,0 +1,44 @@
+<div class="content   justify-between p-[1rem] w-full h-full
+            flex  justify-center items-center gap-4
+            mobile:flex mobile:flex-col
+            tablet:flex tablet:flex-col
+">
+  <div class="betters w-[20%] border border-4 border-geo-yellow p-[1rem]
+       tablet:w-full
+       mobile:w-full
+      ">
+      <h1 class="text-medium font-bold
+        tablet:text-regular
+        mobile:text-regular
+        ">Por qué somos mejores</h1>
+      <p class="text-regular">Nuestro equipo de trabajo, los proyectos realizados garantiza la experiencia y
+         la satisfacción de nuestros clientes es la mejor prueba de ello.</p>
+  </div>
+
+  <div class="services w-[80%]
+        flex  justify-center items-start  gap-4
+        tablet:flex-wrap tablet:w-full tablet:h-full
+        mobile:flex-wrap  mobile:w-full mobile:h-full
+      ">
+    @for (service of bestServices; track $index) {
+      <div class="service-bets  w-[30%]
+      flex flex-col gap-2 justify-between items-center
+        mobile: w-full
+        tablet: w-full
+      ">
+        <div class="icon text-5xl text-geo-white bg-geo-yellow h-[6rem] w-[6rem] rounded-[50%]
+            flex justify-center items-center
+        " [innerHTML]="service.icon">
+        </div>
+        <div class="description  flex flex-col justify-center items-center">
+          <h2 class="text-regular font-bold
+            tablet:text-base
+            mobile:text-base
+          ">{{service.title}}</h2>
+          <p class="text-center">{{service.description}}</p>
+        </div>
+      </div>
+    }
+  </div>
+
+</div>

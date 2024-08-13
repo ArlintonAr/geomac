@@ -1,0 +1,16 @@
+<div class="content w-full flex flex-col gap-3  p-[1rem]">
+
+  @for (item of menuItems; track $index) {
+  <a [routerLink]="item.route" routerLinkActive="router-link-active" class="cursor-pointer" >
+    <div class="item bg-geo-griss-light border text-base text-left font-bold p-[.8rem] w-auto
+      rounded-[5px]
+        hover:bg-geo-yellow hover:text-geo-white
+
+        ">
+      <p>{{item.title}}</p>
+    </div>
+  </a>
+  }
+
+
+</div>

@@ -1,0 +1,47 @@
+<div class="content  p-[1rem] h-screen gap-5
+    flex justify-between
+
+    mobile:flex-col mobile:h-auto
+    tablet:flex-col tablet:h-auto
+
+    ">
+
+    <ol class=" flex flex-col justify-between gap-5
+        mobile:w-full
+        tablet:w-full
+      ">
+      @for (contact of contacts; track $index) {
+        <li class=" flex gap-3
+        mobile:w-full
+        tablet:w-full
+        ">
+            <span [innerHTML]="contact.icon" class=" flex-none flex items-center justify-center w-[4rem] h-[4rem] bg-geo-yellow rounded-full
+              text-geo-white text-medium
+
+              tablet:text-base tablet:h-[3rem] tablet:w-[3rem]
+              mobile:text-sm mobile:h-[2rem] mobile:w-[2rem]
+
+            ">
+
+            </span>
+            <div class="content-text">
+              <h3 class="font-bold text-regular text-geo-griss-light
+
+                ">{{contact.name}}</h3>
+              @for (item of contact.itemDetail; track $index) {
+                <p class="text-base  ">{{item.date}}</p>
+              }
+            </div>
+        </li>
+      }
+    </ol>
+
+
+  <div class="map flex flex-col justify-between gap-3 w-[70%]
+  mobile:w-full
+  tablet:w-full
+    ">
+    <iframe class="border border-3 border-geo-blue w-[100%] h-[50%]"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.180061795592!2d-78.54416748522601!3d-7.105119994869008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91b250beda38a637%3A0x27ef317bdcd2dc8!2sHuambocancha%20Alta!5e0!3m2!1ses!2spe!4v1656876003631!5m2!1ses!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe class="border border-3 border-geo-blue w-[100%] h-[50%]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9761.047770499636!2d-78.45028922349452!3d-7.183995905542218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8f61c0bd4a7b2661!2zN8KwMTAnNTguNyJTIDc4wrAyNic1MC45Ilc!5e0!3m2!1ses!2spe!4v1658090064488!5m2!1ses!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>

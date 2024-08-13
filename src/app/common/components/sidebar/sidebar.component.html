@@ -1,0 +1,48 @@
+<nav class="navigation  p-[1rem] h-[100%] w-full mt-[1rem]
+            ">
+
+      <div id="navbar" class="text-geo-white font-bold  w-full h-[2.5rem]
+            flex justify-between items-center
+
+            ">
+          <button hidden class="close-navbar"><i class="fa fa-close"></i></button>
+
+          <div class="logo w-[15%]">
+            <img src="../../../../assets/img/logo-footer.svg" alt="">
+          </div>
+
+          <ul class="nav  m-[0] flex justify-between items-center w-[50%]  relative
+          tablet:hidden
+          mobile:hidden
+          ">
+
+            @for (itemMenu of itemsMenuNavbar; track $index) {
+                <li class="hover:border-b hover:border-geo-yellow transition duration-400 pb-[.5rem] pt-[.5rem] cursor-pointer
+                  group
+                ">
+                  <a class="cursor-pointer text-base"
+                  [routerLink]="itemMenu.route" routerLinkActive="active" >
+                    {{itemMenu.name}}
+                  </a>
+                  @if (itemMenu.subMenu) {
+                    <ul class="absolute top-[55px] z-30 ">
+                      @for (subItem of itemMenu.subMenu; track $index) {
+                        <a [routerLink]="subItem.route"  class="text-geo-white bg-geo-blue p-[1rem] text-base font-light border-b w-[20rem] cursor-pointer
+                        hover:bg-geo-white hover:text-geo-blue hidden
+                        group-hover:block transition duration-600
+                         ">
+                        <li   >
+                         {{subItem.name}}
+                        </li>
+                      </a>
+                      }
+                    </ul>
+                  }
+                </li>
+            }
+          </ul>
+
+      </div>
+
+</nav>
+

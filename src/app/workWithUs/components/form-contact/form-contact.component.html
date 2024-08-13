@@ -1,0 +1,42 @@
+
+    <div class="content p-[1rem] w-full h-screen  ">
+        <form class="contact-form grid grid-cols-2 gap-3 justify-between items-center h-[100%]
+          mobile:grid-cols-1
+        " [formGroup]="myFormContact" >
+            <div class=" w-full  h-[40%] ">
+                <label for="f-name "  class="text-base font-bold">Nombre</label>
+                <input type="text" class="form-control w-full rounded-lg border border-3 border-geo-griss-light h-[80%]"  formControlName="name" >
+            </div>
+            <div class=" w-full h-[40%]">
+                <label for="l-name" class="text-base font-bold">Apellido</label>
+                <input type="text" class="form-control  w-full rounded-lg border border-3 border-geo-griss-light h-[80%]"  formControlName="lastName">
+            </div>
+            <div class="w-full h-[40%]">
+                <label for="email" class="text-base font-bold">Correo electrónico</label>
+                <input type="email" class="form-control w-full rounded-lg border border-3 border-geo-griss-light h-[80%]" formControlName="email" >
+            </div>
+            <div class="w-full h-[40%]">
+                <label for="phone" class="text-base font-bold">Celular</label>
+                <input type="text" class="form-control w-full rounded-lg border border-3 border-geo-griss-light h-[80%]" formControlName="phone" >
+            </div>
+            <div class="w-full col-span-2 h-[80%]
+              mobile:col-auto
+            ">
+                <label for="message" class="text-base font-bold">Mensaje</label>
+                <textarea class=" form-control w-full rounded-lg border border-3 border-geo-griss-light h-[100%]" id="message" name="note" formControlName="message"></textarea>
+            </div>
+             <div class="w-full mt-[1rem] col-span-2 bg-geo-yellow h-[50%] flex justify-center items-center text-regular font-bold rounded-lg cursor-pointer
+              mobile:col-auto mobile:text-sm mobile:h-[90%]
+              tablet:text-base
+              hover:bg-geo-blue
+             ">
+                <button class="theme-btn text-geo-white" >Enviar</button>
+
+            </div>
+           <!--  <div class="error-handling-messages">
+                <div id="success">Gracias</div>
+                <div id="error"> Ocurrió un error al enviar el correo electrónico. Por favor, inténtelo de nuevo más tarde. </div>
+            </div> -->
+        </form>
+    </div>
+

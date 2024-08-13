@@ -1,0 +1,35 @@
+<div class="recent-projects bg-geo-blue flex flex-col justify-around gap-6 h-full  pb-[3rem]">
+  <div class="title w-full
+        flex justify-center items-center
+        ">
+    <h1 class="text-3xl font-bold text-geo-white ">PROYECTOS RECIENTES
+      <div class="bar  bg-geo-yellow rounded-[20px] w-[3rem] h-[.3rem]"></div>
+    </h1>
+
+  </div>
+  <div class="content-album  w-full h-[auto] cursor-pointer
+     overflow-x-scroll
+     flex
+    ">
+    @for (album of albumProjects; track $index) {
+      <div class="group img-album w-[auto] h-[auto]
+                  relative
+                  flex-none
+                  flex justify-center
+                  ">
+        <img class=" object-cover  h-[300px]" [src]="album.photo" alt="" >
+        <div class="title-description absolute w-[95%] h-[95%] top-[8px] bg-geo-blue  border border-4 border-geo-yellow
+                    opacity-[.8] z-10 invisible
+                    flex justify-center items-center
+                    group-hover:visible
+                    ">
+            <div class="texts w-[80%] text-center">
+              <h1 class="text-geo-white font-bold text-regular 	">{{album.name}}</h1>
+              <p class="text-geo-yellow font-bold">{{album.description}}</p>
+            </div>
+        </div>
+      </div>
+    }
+  </div>
+
+</div>

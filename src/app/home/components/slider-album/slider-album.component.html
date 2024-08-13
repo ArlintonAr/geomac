@@ -1,0 +1,32 @@
+<div class="album relative   h-screen   shadow-customShadow mobile:h-screen tablet:h-screen">
+  <div class="position absolute  bg-geo-blue opacity-[.7] h-screen w-full z-10 ">
+
+  </div>
+
+  @if(photoShow){
+    <div class="images relative z-0 ">
+      <img class="w-full h-screen mobile:h-screen tablet:h-screen object-cover" [src]="photoShow.route" alt="">
+    </div>
+    <div class="content-texts absolute top-[40%] left-[10%] h-full mobile:h-auto tablet:h-auto text-geo-white z-20
+      ">
+      <h1 class="text-large w-[80%]  mobile:text-regular tablet:text-medium " [innerHTML]="photoShow.title"></h1>
+      <p class="text-regular w-[50%] mobile:text-sm tablet:text-base" >{{photoShow.description}}</p>
+    </div>
+  }
+
+ <!--  <div class="buttonOne absolute top-[40%] z-20 text-large text-geo-white h-full hover:text-geo-yellow transition duration-800
+  mobile:text-sm
+  tablet:text-sm
+      " (click)="changeForButton()">
+    <i class="fa-solid fa-caret-left m-[1rem] cursor-pointer"  ></i>
+  </div>
+ -->
+<!--   <div class="buttontwo absolute right-[0] top-[40%] z-20 text-large text-geo-white h-full hover:text-geo-yellow transition duration-800
+  mobile:text-sm
+  tablet:text-sm
+      "  (click)="changeForButton()">
+    <i class="fa-solid fa-caret-right m-[1rem]  cursor-pointer" ></i>
+  </div>
+ -->
+</div>
+

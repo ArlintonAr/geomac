@@ -1,0 +1,15 @@
+<div class="album-companies w-full h-[20rem]   p-[1rem] cursor-pointer
+            overflow-x-hidden
+            flex justify-between items-center  gap-4
+
+        " (mousedown)="dragCompanie($event)">
+    @for (photo of photosAlbum; track $index) {
+      <div class="photos w-[25%]  transition transform duration-800]
+             flex-none border border-2 border-geo-griss-light
+             mobile:w-[50%]
+             ">
+          <img class="w-full object-cover h-full" [src]="photo.route" alt="">
+      </div>
+    }
+
+</div>
