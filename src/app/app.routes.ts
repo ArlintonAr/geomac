@@ -30,7 +30,7 @@ import { LayoutWorkWithComponent } from './workWithUs/pages/layout-work-with.com
 
 export const routes: Routes = [
   {
-    path: 'inicio',
+    path:'',
     component: LayoutsComponent,
     children: [
       { path: 'inicio', component: LayoutHomeComponent },
@@ -65,11 +65,12 @@ export const routes: Routes = [
       },
       { path: 'clientes', component: LayoutPagesComponent },
       { path: 'trabaja-con-nosotros', component: LayoutWorkWithComponent },
+      {path:'**',redirectTo:'/inicio',pathMatch:'full'}
     ]
   },
   {
     path: '**',
-    redirectTo: '/inicio',
+    redirectTo: 'inicio',
     pathMatch: 'full',
   }
 ];

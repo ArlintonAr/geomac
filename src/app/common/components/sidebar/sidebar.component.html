@@ -20,14 +20,14 @@
                 <li class="hover:border-b hover:border-geo-yellow transition duration-400 pb-[.5rem] pt-[.5rem] cursor-pointer
                   group
                 ">
-                  <a class="cursor-pointer text-base"
+                  <a class="cursor-pointer text-sm"
                   [routerLink]="itemMenu.route" routerLinkActive="active" >
                     {{itemMenu.name}}
                   </a>
                   @if (itemMenu.subMenu) {
                     <ul class="absolute top-[55px] z-30 ">
                       @for (subItem of itemMenu.subMenu; track $index) {
-                        <a [routerLink]="subItem.route"  class="text-geo-white bg-geo-blue p-[1rem] text-base font-light border-b w-[20rem] cursor-pointer
+                        <a [routerLink]="subItem.route"  class="text-geo-white bg-geo-blue p-[1rem] text-sm font-light border-b w-[20rem] cursor-pointer
                         hover:bg-geo-white hover:text-geo-blue hidden
                         group-hover:block transition duration-600
                          ">
